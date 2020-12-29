@@ -1,0 +1,79 @@
+em {
+  color: red;
+}
+/* Cascade rule */
+p {
+  color: blue;
+}
+/* p{
+    color: red;
+}
+p{
+    color: green;
+} */
+/* Specificity rule*/
+h2 {
+  color: green;
+}
+.spec {
+  color: orange;
+}
+#spec {
+  color: purple;
+}
+
+/* inheritance rule */
+
+.main {
+  color: rebeccapurple;
+  border: 2px solid purple;
+  padding: 16px;
+}
+.special {
+  padding: inherit;
+  color: inherit;
+}
+ul {
+  color: green;
+}
+.my-class-1 a {
+  color: inherit;
+}
+.my-class-2 a {
+  color: initial;
+}
+.my-class-3 a {
+  color: unset;
+}
+/* Pseudo class*/
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+  color: greenyellow;
+}
+article p:last-child {
+  font-size: 120%;
+  font-weight: bold;
+  color: orangered;
+}
+ol li:only-child {
+  color: green;
+  border: 2px dotted red;
+}
+
+.anchor:link {
+  color: green;
+}
+.anchor:visited {
+  color: red;
+}
+.anchor:hover {
+  color: purple;
+}
+.anchor:active {
+  color: orangered;
+}
+a:any-link {
+  border: 2px solid blue;
+}
+/* Pseudo element  */

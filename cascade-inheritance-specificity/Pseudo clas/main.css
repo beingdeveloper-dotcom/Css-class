@@ -1,0 +1,88 @@
+body {
+  width: 80%;
+  margin: 45px auto;
+  background-color: #f4f4f4;
+}
+h1 {
+  text-align: center;
+}
+b {
+  border: 1.5px solid red;
+}
+em {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: block;
+}
+.adjacent p + p {
+  background-color: green;
+}
+.sub-adjacent span + p {
+  background-color: yellow;
+}
+.general .top ~ .bottom {
+  background-color: pink;
+}
+.general .top p ~ p {
+  font-size: 24px;
+}
+#pseudo {
+  border: 2px solid #333;
+}
+.type-of :only-of-type {
+  color: green;
+}
+.first-type p:first-of-type {
+  background-color: yellow;
+}
+.first :first-of-type {
+  background-color: orange;
+}
+.last :last-of-type {
+  background-color: rgb(0, 89, 255);
+}
+.not p {
+  color: red;
+  background-color: blue;
+}
+.not p:not(.fancy) {
+  background-color: unset;
+  font-style: italic;
+  font-size: 25px;
+}
+.form1 input:in-range {
+  background-color: blue;
+}
+.form1 input:in-range + label::after {
+  content: "okey";
+}
+.form1 input:out-of-range {
+  background-color: red;
+}
+.form1 input:out-of-range + label::after {
+  content: "out of range";
+}
+.box-model {
+  box-sizing: content-box;
+}
+.box-model h2 {
+  background-color: gray;
+  box-sizing: content-box;
+  height: 222px;
+  padding: 15px;
+  width: 222px;
+  margin: 22px;
+  min-width: 125px;
+}
+.box-model-1 h2 {
+  box-sizing: border-box;
+  height: 222px;
+  background-color: gray;
+  padding: 15px;
+  width: 222px;
+  margin: 22px;
+  /* min-width: 125px; */
+  max-height: 125px;
+  min-height:225px;
+}

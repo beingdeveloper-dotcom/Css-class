@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>pseudo class</title>
+  </head>
+  <body>
+    <h1>All pseudo class and Combinators</h1>
+    <ol>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator"
+          >adjacent Sibling Combinator</a
+        >
+      </li>
+      <p>
+        The <b>adjacent sibilings combinator(+)</b>separates two selectors and
+        matches the second element only if it immediately follows the first
+        element, and both are chilldren of the same parent element
+      </p>
+      <em>Example:</em>
+      <div class="adjacent" id="pseudo">
+        <p>I am paragraph one</p>
+        <p>I am paragraph tow</p>
+        <div class="sub-adjacent">
+          <span>I am sub adjacent one</span>
+          <p>I am sub adjacent two</p>
+        </div>
+      </div>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator"
+          >General sibling combinator</a
+        >
+      </li>
+      <p>
+        The <b>General sibilings combinator(~)</b>separates two selectors and
+        matches all iterations of the second element, that are following the
+        first element (though not necessarily immediately), and are children of
+        the same parent
+      </p>
+      <em>Example:</em>
+      <div class="general" id="pseudo">
+        <div class="top">
+          <p>I am pargraph one</p>
+          <p>I am pargraph two</p>
+          <p>I am pargraph three</p>
+        </div>
+        <div class="bottom">
+          <p>I am pargraph foue</p>
+          <p>I am pargraph five</p>
+          <p>I am pargraph six</p>
+        </div>
+      </div>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:only-of-type"
+          >only-of-type:</a
+        >
+        <p>
+          The <b>:only-of-type</b> CSS pseudo class represents an element that
+          has no sibilings of the same type.
+        </p>
+        <em>Example:</em>
+
+        <div class="type-of" id="pseudo">
+          <div>I am `div` #1.</div>
+          <p>I am the only `p` among my siblings.</p>
+          <div>I am `div` #2.</div>
+          <div>
+            I am `div` #3.
+            <i>I am the only `i` child.</i>
+            <span>I am `em` #1.</span>
+            <span>I am `em` #2.</span>
+          </div>
+        </div>
+      </li>
+      <br />
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type"
+          >:first-of-type</a
+        >
+        <p>
+          The <b>:first-of-type</b> CSS pseudo class represents the first
+          element of its type among a group of sibiling elements
+        </p>
+        <em>Example 1:</em>
+        <div class="first-type" id="pseudo">
+          <h2>heading one</h2>
+          <p>paragraph one</p>
+          <p>paragraph two</p>
+          <p>paragraph three</p>
+        </div>
+        <em>Example 2:</em>
+        <div class="first" id="pseudo">
+          <h2>heading one</h2>
+          <h2>heading two</h2>
+          <h3>heading three</h3>
+          <p>paragraph one</p>
+          <p>paragraph two</p>
+          <span>span 1</span>
+          <p>paragraph three</p>
+        </div>
+      </li>
+      <br />
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-of-type"
+          >:last-of-type</a
+        >
+        <p>
+          The <b>:last-of-type</b> CSS pseudo class represents the last element
+          of its type among a group of sibilings
+        </p>
+        <em>Example:</em>
+        <div class="last" id="pseudo">
+          <h2>heading one</h2>
+          <h2>heading two</h2>
+          <h3>heading three</h3>
+          <p>paragraph one</p>
+          <p>paragraph two</p>
+          <span>span 1</span>
+          <p>paragraph three</p>
+        </div>
+      </li>
+      <br />
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:not">:not</a>
+      </li>
+      <p>
+        The <b>:not()</b> CSS pseudo class represents element that do match a
+        list of selectors.Since it prevents specific items from being selected,
+        it is known as the negation pseudo-class.
+      </p>
+      <p>
+        The :not() pseudo-class requires a comma-separated list of one or more
+        selectors as its argument. The list must not contain another negation
+        selector or a pseudo-element.
+      </p>
+      <em>Example:</em>
+      <div class="not" id="pseudo">
+        <p>I am a paragraph.</p>
+        <p class="fancy">I am so very fancy!</p>
+        <div>I am NOT a paragraph.</div>
+        <h2>
+          <span class="foo">foo inside h2</span>
+          <span class="bar">bar inside h2</span>
+        </h2>
+      </div>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range"
+          >:out-of-range</a
+        >
+        <p>
+          The <b>:out-of-range</b>CSS pseudo class represents an "input" element
+          whose current value is outside the range limits specified by the "min"
+          and "max" attributes.
+        </p>
+        <em>Example:</em>
+        <form class="form1" id="pseudo">
+          <p>Values between 1 and 10 are valid.</p>
+          <ul>
+            <li>
+              <input
+                id="value1"
+                name="value1"
+                type="number"
+                placeholder="1 to 10"
+                min="1"
+                max="10"
+                value="12"
+              />
+              <label for="value1">Your value is </label>
+            </li>
+          </ul>
+        </form>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range"
+          >:in-range</a
+        >
+      </li>
+      <p>
+        The <b>:in-range</b> CSS pseudo-class represents an "input"element whose
+        current value is within the range limits specified by the "min" and
+        "max" attributes.
+      </p>
+    </ol>
+  <br><br>
+  <h1>Box Model</h1>
+  <p>Every box is composed fo four part,define by their respective edges:
+    <ol>
+      <li>the content edge</li>
+      <li>padding edge</li>
+      <li>border edge</li>
+      <li>margin edge</li>
+    </ol>
+    <img src="./boxmodel-(3).png" alt="">
+  </p>
+  <div class="box-model">
+    <h2>content-box</h2>
+    <p>content paragraph</p>
+  </div>
+  <div class="box-model-1">
+    <h2>content-box</h2>
+    <p>content paragraph</p>
+  </div>
+  <em>
+    <ol>
+      <li>max-height overrides height, but min-height overrides max-height.
+      </li>
+      <li>max-width overrides width, but min-width overrides max-width.</li>
+    </ol>
+  </em>
+  <h1>overscroll-behavior-block</h1>
+  <p>The <b>overscroll-behavior-block</b>CSS property set the browser's behavior when the block direction  boundary of a scrolling area is reached.</p>
+  <code>
+    <kbd>
+      overscroll-behavior-block: auto; /* default */
+      overscroll-behavior-block: contain;
+      overscroll-behavior-block: none;
+
+
+      overscroll-behavior-block: inherit;
+      overscroll-behavior-block: initial;
+      overscroll-behavior-block: unset;
+    </kbd>
+  </code>
+  </body>
+</html>

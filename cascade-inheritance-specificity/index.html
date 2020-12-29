@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Casecade|Specificity|Inheritance</title>
+  </head>
+  <body>
+    <h1>Casecade:</h1>
+    <p>Casecade</p>
+    <p>Casecade</p>
+    <strong
+      >Note:Stylesheets cascade- at a very simple level, this means that the
+      order of CSS rules matter;when two rules apply that that have equal
+      <em>"Specificity"</em> the one that comes last in the css is the one that
+      will be used.</strong
+    >
+    <h1>Specificity:</h1>
+    <strong
+      >Specificity is how the browser decides which rule applies if multiple
+      rules have different selectors, but could still apply to the same element.
+      It is basically a measure of how specific a selector's selections will
+      be:</strong
+    >
+    <ul>
+      <li>
+        An element selectors is less specific: it will select all elements of
+        that type that appear on a page — so will get a lower score.
+      </li>
+      <li>
+        A class selector is more specific — it will select only the elements on
+        a page that have a specific class attribute value — so will get a higher
+        score.
+      </li>
+      <li>A Id selector is more specific than class and element.</li>
+      <li>
+        if you apply inline style than its more specificity than other selectors
+      </li>
+    </ul>
+    <b
+      >Note:
+      <em
+        >The universal selector (*), combinators (+, >, ~, ' '), and negation
+        pseudo-class (:not) have no effect on specificity.</em
+      ></b
+    >
+    <b>Ex:</b>
+    <h2 class="spec" id="spec" style="color: pink">Specificity</h2>
+    <h1>Inheritance:</h1>
+    <strong
+      >inheritance also needs to be understood in this context-some CSS property
+      values set on parent Element are inherited by their child element, and
+      some aren't</strong
+    >
+    <ul class="main">
+      <li>Item One</li>
+      <li>
+        Item Two
+        <ul>
+          <li>2.1</li>
+          <li>2.2</li>
+        </ul>
+      </li>
+      <li>
+        Item Three
+        <ul class="special">
+          <li>
+            3.1
+            <ul>
+              <li>3.1.1</li>
+              <li>3.1.2</li>
+            </ul>
+          </li>
+          <li>3.2</li>
+        </ul>
+      </li>
+    </ul>
+    <h1>Controlling inheritance</h1>
+    <p>
+      CSS provides four special universal property values for controlling
+      inheritance.
+    </p>
+    <ol>
+      <li><em>inherit</em></li>
+      <li><em>initial</em></li>
+      <li><em>unset</em></li>
+      <li><em>revert</em></li>
+    </ol>
+    <b>Ex:</b>
+    <ul>
+      <li>Default <a href="#">link</a> color</li>
+      <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+      <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+      <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+    <h1>Pseudo class and Pseudo Element</h1>
+    <b>pseudo class keyword: <em>":pseudo class-name"</em></b>
+    <em>Ex:</em>
+    <article>
+      <p>
+        Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+        onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+      </p>
+      <p>
+        Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+        courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+        wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+      </p>
+    </article>
+    <b><em>:only-child</em></b>
+    <p>
+      The :only-child CSS pseudo-class represents an element without any
+      siblings. This is the same as :first-child:last-child or
+      :nth-child(1):nth-last-child(1), but with a lower specificity.
+    </p>
+    <b>Ex:</b>
+    <ol>
+      <p>with a lower specificity.</p>
+      <li>
+        First
+        <ul>
+          <li>This list has just one element.</li>
+        </ul>
+      </li>
+      <li>
+        Second
+        <ul>
+          <li>This list has three elements.</li>
+          <li>This list has three elements.</li>
+          <li>This list has three elements.</li>
+        </ul>
+      </li>
+    </ol>
+    <h1><em>All Pseudo Class</em></h1>
+    <ol>
+      <li>
+        <h2><em>active pseudo class:</em></h2>
+        <p>The :active CSS pseudo class represents an element that is being activated by the users. when using a mouse, "activation" typically starts when user presses down the primary mouse botton.</p>
+        <p>The :active pseudo-class is commonly used on anchor tag and button tag and  elements. Other common targets of this pseudo-class include elements that contain an activated element, and form elements that are being activated through their associated <label></p>
+          <em>Ex:</em>
+          <a href="" class="anchor">click me</a>
+      </li>
+    </ol>
+
+    <h1>Pseudo Element</h1>
+    <strong>
+      Pseudo element behave in a similar way, however they act as aif ou had
+      added whole new HTML element into the markup, rather than applying a class
+      to existing element. Pseudo-element start with a double colon <em>::</em>
+    </strong>
+    <b
+      ><em>Syntax <kbd>></kbd>::</em></b
+    >
+  </body>
+</html>
